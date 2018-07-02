@@ -33,7 +33,7 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
-        <Button iconLeft light>
+        <Button iconLeft>
             <Icon name='arrow-back' />
             <Text>Back</Text>
           </Button>
@@ -50,13 +50,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: 'center',
     margin: 10,
+    fontFamily: 'CircularStd-Book',
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+    fontFamily: 'CircularStd-Bolditalic',
   },
 });

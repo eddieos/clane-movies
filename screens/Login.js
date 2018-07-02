@@ -13,7 +13,7 @@ class Login extends React.Component {
         return (
             <View style={styles.loginBg}>
                 <Image style={{width: 152, height: 50, alignSelf: 'center', marginTop: 50}}
-                       source={require('./assets/img/movie-logo.png')}/>
+                       source={require('../assets/img/movie-logo.png')}/>
                 <View>
                     <View style={styles.rowed}>
                         <Button primary style={[styles.socialButton, styles.fb]}>

@@ -83,5 +83,63 @@ export default StyleSheet.create({
     buttonText: {
         fontFamily: 'CircularStd-Bold',
         fontSize: 20,
+    },
+    headerText: {
+        color: '#231F20',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 14,
+        marginLeft: 10,
+        marginBottom: 5
+    },
+    imageGrid: {
+        width: 130,
+        height: 100,
+        marginHorizontal: 10,
+        borderRadius: 12,
+    },
+    shadowed: {
+        shadowColor: '#000',
+        shadowOffset: { height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+    },
+    movieList: {
+        flexDirection: 'row',
+        marginHorizontal: 10,
+        marginTop: 10,
+
+    },
+    imageThumb: {
+        width: 80,
+        height: 100,
+    },
+    listHeader: {
+        color: '#EEE6D9',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 14,
+    },
+    listDesc: {
+        color: 'rgba(238, 230, 217, 0.7)',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 12
+    },
+    listGenre: {
+        color: '#BF9000',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 8,
+    },
+    listRating: {
+        position: 'absolute',
+        color: '#FFFFFF',
+        fontFamily: 'CircularStd-Medium',
+        fontSize: 9,
+        top: 8,
+        left: 5,
+    },
+    listTime: {
+        color: '#AF7D04',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 12,
+        textAlign: 'center'
     }
 });

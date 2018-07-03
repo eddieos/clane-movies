@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, {Component} from 'react';
 import {
     Image,
@@ -11,16 +5,16 @@ import {
 } from 'react-native';
 import {Icon, Text, Header, Item, Input,} from 'native-base';
 
-// Global Styles
-import styles from './styles/style';
 
-type Props = {};
-export default class App extends Component<Props> {
+import styles from "../styles/style";
+
+class HomeFeed extends React.Component {
+
     render() {
         return (
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
                 <ImageBackground
-                    source={require('./assets/img/sliderBG.png')}
+                    source={require('../assets/img/sliderBG.png')}
                     style={{height: 200}}>
                     <Header transparent searchBar rounded>
                         <View style={{width: 100}}></View>
@@ -36,22 +30,22 @@ export default class App extends Component<Props> {
                         showsHorizontalScrollIndicator={false}>
                         <TouchableOpacity style={styles.shadowed}>
                             <Image style={styles.imageGrid}
-                                   source={require('./assets/img/avengers/thumb.jpg')}
+                                   source={require('../assets/img/avengers/thumb.jpg')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.shadowed}>
                             <Image style={styles.imageGrid}
-                                   source={require('./assets/img/incredibles/poster.jpg')}
+                                   source={require('../assets/img/incredibles/poster.jpg')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.shadowed}>
                             <Image style={styles.imageGrid}
-                                   source={require('./assets/img/annihilation/poster.jpg')}
+                                   source={require('../assets/img/annihilation/poster.jpg')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.shadowed}>
                             <Image style={styles.imageGrid}
-                                   source={require('./assets/img/blackpanther/poster.jpg')}
+                                   source={require('../assets/img/blackpanther/poster.jpg')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
                     </ScrollView>
@@ -60,7 +54,7 @@ export default class App extends Component<Props> {
                 {/*Movie Lists*/}
                 <View style={styles.movieList}>
                     <Image style={styles.imageThumb}
-                           source={require('./assets/img/annihilation/thumb.jpeg')}
+                           source={require('../assets/img/annihilation/thumb.jpeg')}
                            resizeMode="cover"/>
                     <View style={{
                         flex: 1,
@@ -88,7 +82,7 @@ export default class App extends Component<Props> {
                 </View>
                 <View style={styles.movieList}>
                     <Image style={styles.imageThumb}
-                           source={require('./assets/img/incredibles/thumb.jpeg')}
+                           source={require('../assets/img/incredibles/thumb.jpeg')}
                            resizeMode="cover"/>
                     <View style={{
                         flex: 1,
@@ -117,7 +111,7 @@ export default class App extends Component<Props> {
 
                 <View style={styles.movieList}>
                     <Image style={styles.imageThumb}
-                           source={require('./assets/img/avengers/thumb.jpg')}
+                           source={require('../assets/img/avengers/thumb.jpg')}
                            resizeMode="cover"/>
                     <View style={{
                         flex: 1,
@@ -147,7 +141,7 @@ export default class App extends Component<Props> {
 
                 <View style={styles.movieList}>
                     <Image style={styles.imageThumb}
-                           source={require('./assets/img/blackpanther/poster.jpg')}
+                           source={require('../assets/img/blackpanther/poster.jpg')}
                            resizeMode="cover"/>
                     <View style={{
                         flex: 1,
@@ -175,33 +169,34 @@ export default class App extends Component<Props> {
                 </View>
 
                 <View style={styles.movieList}>
-                <Image style={styles.imageThumb}
-                       source={require('./assets/img/annihilation/thumb.jpeg')}
-                       resizeMode="cover"/>
-                <View style={{flex: 1, marginHorizontal: 10, flexDirection: 'column', justifyContent: 'space-between'}}>
-                    <View>
-                        <Text style={styles.listHeader}>Annihilation</Text>
-                        <Text style={styles.listDesc}>A biologist signs up for a dangerous, secret expedition into a
-                            mysterious zone where the laws of nature don't apply.</Text>
+                    <Image style={styles.imageThumb}
+                           source={require('../assets/img/annihilation/thumb.jpeg')}
+                           resizeMode="cover"/>
+                    <View style={{flex: 1, marginHorizontal: 10, flexDirection: 'column', justifyContent: 'space-between'}}>
+                        <View>
+                            <Text style={styles.listHeader}>Annihilation</Text>
+                            <Text style={styles.listDesc}>A biologist signs up for a dangerous, secret expedition into a
+                                mysterious zone where the laws of nature don't apply.</Text>
+                        </View>
+                        <Text style={styles.listGenre}>Adventure | Drama | Horror | Mystery | Sci-Fi | Thriller</Text>
                     </View>
-                    <Text style={styles.listGenre}>Adventure | Drama | Horror | Mystery | Sci-Fi | Thriller</Text>
-                </View>
-                <View style={{alignItems: 'center', justifyContent: 'space-between'}}>
-                    <View>
-                        <Icon name="ios-heart" style={{color: '#DB3236'}}/>
-                        <Text style={styles.listRating}>70%</Text>
+                    <View style={{alignItems: 'center', justifyContent: 'space-between'}}>
+                        <View>
+                            <Icon name="ios-heart" style={{color: '#DB3236'}}/>
+                            <Text style={styles.listRating}>70%</Text>
+                        </View>
+                        <View>
+                            <Icon name="ios-clock" style={{color: '#AF7D04', top: 3}}/>
+                            <Text style={styles.listTime}>115m</Text>
+                        </View>
                     </View>
-                    <View>
-                        <Icon name="ios-clock" style={{color: '#AF7D04', top: 3}}/>
-                        <Text style={styles.listTime}>115m</Text>
-                    </View>
-                </View>
 
 
-            </View>
+                </View>
 
             </ScrollView>
         );
     }
 }
 
+export default HomeFeed;

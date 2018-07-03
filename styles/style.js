@@ -81,7 +81,7 @@ export default StyleSheet.create({
         elevation: 1,
     },
     buttonText: {
-        fontFamily: 'CircularStd-Bold',
+        fontFamily: 'CircularStd-Medium',
         fontSize: 20,
     },
     headerText: {
@@ -141,5 +141,28 @@ export default StyleSheet.create({
         fontFamily: 'CircularStd-Book',
         fontSize: 12,
         textAlign: 'center'
+    },
+    ticketPrice: {
+        color: '#77101C',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 20,
+    },
+    movieTitle: {
+        color: '#EEE6D9',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 18,
+        marginVertical: 10,
+    },
+    movieRating: {
+        color: '#FFFFFF',
+        fontFamily: 'CircularStd-Medium',
+        fontSize: 12,
+        marginHorizontal: 4
+    },
+    movieTime: {
+        color: '#AF7D04',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 12,
+        marginHorizontal: 4
     }
 });

@@ -164,5 +164,50 @@ export default StyleSheet.create({
         fontFamily: 'CircularStd-Book',
         fontSize: 12,
         marginHorizontal: 4
+    },
+    inputSeatAmount: {
+        textAlign: 'center',
+        height: 40,
+        width: 45,
+        color: '#FFF',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 18,
+        borderWidth: 2,
+        borderColor: '#AF7D04',
+        borderRadius: 4,
+    },
+    seatText: {
+        color: '#EEE6D9',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 20,
+        marginHorizontal: 20
+    },
+    summaryCard: {
+        backgroundColor: '#D8D8D8',
+        margin: 10,
+        borderRadius: 5,
+        padding: 10,
+    },
+    count: {
+        color: '#77101C',
+        fontFamily: 'CircularStd-Medium',
+        fontSize: 22,
+        marginHorizontal: 20
+    },
+    priceText: {
+        color: '#BF9000',
+        fontFamily: 'CircularStd-BookItalic',
+        fontSize: 20,
+        marginLeft: 50
+    },
+    totalAmount: {
+        color: '#BF9000',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 20,
+    },
+    listText: {
+        color: '#231F20',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 20,
     }
 });

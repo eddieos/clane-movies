@@ -107,7 +107,6 @@ export default StyleSheet.create({
         flexDirection: 'row',
         marginHorizontal: 10,
         marginTop: 10,
-
     },
     imageThumb: {
         width: 80,
@@ -268,4 +267,21 @@ export default StyleSheet.create({
         borderRadius: 4,
         marginHorizontal: 5
     },
+    tabCustomText: {
+        color: '#EEE6D9',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 14,
+        marginLeft: 0,
+        marginRight: 0,
+    },
+    activeTabCustomText: {
+        color: '#BF9000',
+        fontFamily: 'CircularStd-Medium',
+        fontSize: 14,
+        marginLeft: 0,
+        marginRight: 0,
+    },
+    customTabStyle: {
+        backgroundColor: '#231F20'
+    }
 });

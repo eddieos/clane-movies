@@ -11,10 +11,11 @@ import { StackNavigator } from 'react-navigation';
 import SplashScreen from './screens/SplashScreen';
 import Login from './screens/Login';
 import SignUp from './screens/SignUp';
+import HomeFeed from './screens/HomeFeed';
 
 
 export default StackNavigator({
-    SplashScreen: {
-        screen: SplashScreen
+    HomeFeed: {
+        screen: HomeFeed
     },
 });

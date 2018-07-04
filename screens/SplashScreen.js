@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 
 class SplashScreen extends React.Component {
-
+    static navigationOptions = { header: null };
     render() {
         return (
             <ImageBackground

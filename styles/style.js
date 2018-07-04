@@ -250,4 +250,22 @@ export default StyleSheet.create({
         fontSize: 16,
         marginHorizontal: 20
     },
+    payAmount: {
+        color: '#EEE6D9',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 20,
+        paddingLeft: 0,
+    },
+    otpInput: {
+        color: '#231F20',
+        fontFamily: 'CircularStd-Book',
+        textAlign: 'center',
+        height: 60,
+        width: 68,
+        fontSize: 36,
+        borderWidth: 2,
+        borderColor: '#AF7D04',
+        borderRadius: 4,
+        marginHorizontal: 5
+    },
 });

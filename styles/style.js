@@ -188,6 +188,12 @@ export default StyleSheet.create({
         borderRadius: 5,
         padding: 10,
     },
+    addCard: {
+        backgroundColor: '#EEE6D9',
+        margin: 10,
+        borderRadius: 5,
+        padding: 10,
+    },
     count: {
         color: '#77101C',
         fontFamily: 'CircularStd-Medium',
@@ -209,5 +215,39 @@ export default StyleSheet.create({
         color: '#231F20',
         fontFamily: 'CircularStd-Book',
         fontSize: 20,
-    }
+    },
+    subTitle: {
+        color: 'rgba(35, 31, 32, 0.5)',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 12,
+    },
+    cardInput: {
+        marginVertical: 5,
+        color: '#231F20',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 24,
+        borderRadius: 4,
+        backgroundColor: '#EEE6D9',
+        borderBottomWidth: 1,
+        borderBottomColor: '#979797',
+        paddingLeft: 3
+    },
+    cvvInput: {
+        marginVertical: 5,
+        color: '#231F20',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 14,
+    },
+    holderInput: {
+        marginVertical: 5,
+        color: '#231F20',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 14
+    },
+    saveLaterText: {
+        color: '#EEE6D9',
+        fontFamily: 'CircularStd-Book',
+        fontSize: 16,
+        marginHorizontal: 20
+    },
 });

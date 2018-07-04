@@ -2,17 +2,29 @@ import React, {Component} from 'react';
 import {
     View, TextInput
 } from 'react-native';
-import {Button, Icon, Text} from 'native-base';
+import {Button, Icon, Text, Header, Left } from 'native-base';
 
 import styles from '../styles/style';
 
 class SignUp extends React.Component {
+    static navigationOptions = { header: null };
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <View style={styles.loginBg}>
-
                 <View>
+                    <Header transparent style={{marginLeft: -30}}>
+                        <Left>
+                            <Button
+                                transparent style={{paddingBottom: 4}}
+                                title="Go back"
+                                onPress={() => this.props.navigation.goBack()}>
+                                <Icon name="ios-arrow-dropleft-circle-outline"  style={{fontSize: 30, color: '#AF7D04'}}/>
+                            </Button>
+                        </Left>
+
+                    </Header>
                     <View style={styles.rowed}>
                         <Button primary style={[styles.socialButton, styles.fb]}>
                             <Icon name='logo-facebook'/>
@@ -56,14 +68,17 @@ class SignUp extends React.Component {
                                    selectionColor="#AF7D04"
                                    keyboardType="phone-pad"/>
                     </View>
-                    <Button block style={[styles.secondaryButton, {marginTop: 10}]}>
+                    <Button block style={[styles.secondaryButton, {marginTop: 10}]}
+                            title="HomeFeed"
+                            onPress={() =>
+                                navigate('HomeFeed', { name: 'HomeFeed' })
+                            }>
                         <Text style={styles.buttonText}>SIGN UP</Text>
                     </Button>
 
                 </View>
 
-
-
+                <View></View>
             </View>
         );
     }

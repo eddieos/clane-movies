@@ -9,8 +9,9 @@ import {Icon, Text, Header, Button, Left, Grid, Col} from 'native-base';
 import styles from "../styles/style";
 
 class Avengers extends React.Component {
-
+    static navigationOptions = { header: null };
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
                 <StatusBar translucent barStyle="light-content" />
@@ -19,7 +20,9 @@ class Avengers extends React.Component {
                     style={{height: 210}}>
                     <Header transparent>
                         <Left>
-                            <Button transparent style={{paddingBottom: 4}}>
+                            <Button transparent style={{paddingBottom: 4}}
+                                    title="Go back"
+                                    onPress={() => this.props.navigation.goBack()}>
                                 <Icon name="ios-arrow-dropleft-circle-outline"  style={{fontSize: 30, color: '#AF7D04'}}/>
                             </Button>
                         </Left>
@@ -36,7 +39,11 @@ class Avengers extends React.Component {
                         </View>
                     </Col>
                     <Col style={{ height: 50 }}>
-                        <Button block style={[styles.primaryButton, {borderRadius: 0}]}>
+                        <Button block style={[styles.primaryButton, {borderRadius: 0}]}
+                                title="Buy Ticket"
+                                onPress={() =>
+                                    navigate('BuyTicket', { name: 'BuyTicket' })
+                                }>
                             <Text style={styles.buttonText}>BUY TICKET</Text>
                         </Button>
                     </Col>

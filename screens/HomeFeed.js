@@ -13,8 +13,10 @@ import styles from "../styles/style";
 import SampleMovieList from "./SampleMovieList";
 
 class HomeFeed extends React.Component {
-    static navigationOptions = { header: null };
+    static navigationOptions = {header: null};
+
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
                 <ImageBackground
@@ -32,7 +34,11 @@ class HomeFeed extends React.Component {
                     <ScrollView
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}>
-                        <TouchableOpacity style={styles.shadowed}>
+                        <TouchableOpacity style={styles.shadowed}
+                                          title="Avengers"
+                                          onPress={() =>
+                                              navigate('Avengers', {name: 'Avengers'})
+                                          }>
                             <Image style={styles.imageGrid}
                                    source={require('../assets/img/avengers/thumb.jpg')}
                                    resizeMode="cover"/>
@@ -55,13 +61,14 @@ class HomeFeed extends React.Component {
                     </ScrollView>
                 </ImageBackground>
 
-                <Tabs renderTabBar={() => <ScrollableTab style={{ backgroundColor: "#231F20", borderColor: '#BF9000' }}  />} tabBarUnderlineStyle={{ backgroundColor: '#BF9000'}}>
+                <Tabs renderTabBar={() => <ScrollableTab style={{backgroundColor: "#231F20", borderColor: '#BF9000'}}/>}
+                      tabBarUnderlineStyle={{backgroundColor: '#BF9000'}}>
                     <Tab heading="Action"
                          textStyle={styles.tabCustomText}
                          activeTextStyle={styles.activeTabCustomText}
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
-                         style={{ backgroundColor: '#231F20'}}>
+                         style={{backgroundColor: '#231F20'}}>
                         <SampleMovieList/>
                     </Tab>
                     <Tab heading="Adventure"
@@ -69,7 +76,7 @@ class HomeFeed extends React.Component {
                          activeTextStyle={styles.activeTabCustomText}
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
-                         style={{ backgroundColor: '#231F20'}}>
+                         style={{backgroundColor: '#231F20'}}>
                         <SampleMovieList/>
                     </Tab>
                     <Tab heading="Drama"
@@ -77,7 +84,7 @@ class HomeFeed extends React.Component {
                          activeTextStyle={styles.activeTabCustomText}
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
-                         style={{ backgroundColor: '#231F20'}}>
+                         style={{backgroundColor: '#231F20'}}>
                         <SampleMovieList/>
                     </Tab>
                     <Tab heading="Thriller"
@@ -85,7 +92,7 @@ class HomeFeed extends React.Component {
                          activeTextStyle={styles.activeTabCustomText}
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
-                         style={{ backgroundColor: '#231F20'}}>
+                         style={{backgroundColor: '#231F20'}}>
                         <SampleMovieList/>
                     </Tab>
                     <Tab heading="Horror"
@@ -93,11 +100,10 @@ class HomeFeed extends React.Component {
                          activeTextStyle={styles.activeTabCustomText}
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
-                         style={{ backgroundColor: '#231F20'}}>
+                         style={{backgroundColor: '#231F20'}}>
                         <SampleMovieList/>
                     </Tab>
                 </Tabs>
-
 
 
             </ScrollView>

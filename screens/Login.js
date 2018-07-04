@@ -8,8 +8,9 @@ import {Button, Icon, Text} from 'native-base';
 import styles from '../styles/style';
 
 class Login extends React.Component {
-
+    static navigationOptions = { header: null };
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <View style={styles.loginBg}>
                 <Image style={{width: 152, height: 50, alignSelf: 'center', marginTop: 50}}
@@ -36,13 +37,21 @@ class Login extends React.Component {
                                    selectionColor="#AF7D04"
                                    secureTextEntry/>
                     </View>
-                    <Button block style={[styles.primaryButton, {marginTop: 10}]}>
+                    <Button block style={[styles.primaryButton, {marginTop: 10}]}
+                            title="HomeFeed"
+                            onPress={() =>
+                                navigate('HomeFeed', { name: 'HomeFeed' })
+                            }>
                         <Text style={styles.buttonText}>LOGIN</Text>
                     </Button>
 
                     <Text style={{color: '#EEE6D9', fontSize: 12, textAlign: 'center', marginVertical: 30}}>OR</Text>
 
-                    <Button block style={styles.secondaryButton}>
+                    <Button block style={styles.secondaryButton}
+                            title="SignUp"
+                            onPress={() =>
+                                navigate('SignUp', { name: 'SignUp' })
+                            }>
                         <Text style={styles.buttonText}>SIGN UP</Text>
                     </Button>
                 </View>

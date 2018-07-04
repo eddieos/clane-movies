@@ -9,6 +9,7 @@ import {Icon, Text, Button, Left, Right, ListItem, Radio} from 'native-base';
 import styles from "../styles/style";
 
 class BuyTicket extends React.Component {
+    static navigationOptions = { header: null };
 
     constructor(props) {
         super(props);
@@ -48,13 +49,17 @@ class BuyTicket extends React.Component {
     }
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
                 <View style={[styles.rowed, {marginTop: 10}]}>
-                    <Button transparent style={{paddingBottom: 4}}>
+                    <Button transparent style={{paddingBottom: 4}}
+                            title="Go back"
+                            onPress={() => this.props.navigation.goBack()}>
                         <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
                     </Button>
                     <Text style={[styles.movieTitle]}>Avengers: Infinity War</Text>
+                    <View></View>
                     <View></View>
                 </View>
 
@@ -110,7 +115,11 @@ class BuyTicket extends React.Component {
                 </View>
 
                 <Button block iconRight
-                        style={[styles.primaryButton, {marginVertical: 10, marginHorizontal: 10, borderRadius: 0}]}>
+                        style={[styles.primaryButton, {marginVertical: 10, marginHorizontal: 10, borderRadius: 0}]}
+                        title="Add New Card"
+                        onPress={() =>
+                            navigate('AddNewCard', { name: 'AddNewCard' })
+                        }>
                     <Text style={styles.buttonText}>ADD NEW CARD</Text>
                     <Icon name='ios-add-circle' style={{fontSize: 25, color: '#EEE6D9'}}/>
                 </Button>
@@ -175,7 +184,10 @@ class BuyTicket extends React.Component {
                     </ListItem>
                 </View>
 
-                <Button block style={[styles.secondaryButton, {marginTop: 30, marginHorizontal: 10}]}>
+                <Button block style={[styles.secondaryButton, {marginTop: 30, marginHorizontal: 10}]}title="OTP"
+                        onPress={() =>
+                            navigate('Otp', { name: 'Otp' })
+                        }>
                     <Text style={styles.buttonText}>CHECKOUT AND PAY</Text>
                 </Button>
 

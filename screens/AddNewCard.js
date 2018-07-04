@@ -9,6 +9,7 @@ import {Icon, Text, Button, DatePicker, ListItem, CheckBox} from 'native-base';
 import styles from "../styles/style";
 
 class AddNewCard extends React.Component {
+    static navigationOptions = { header: null };
 
     constructor(props) {
         super(props);
@@ -23,10 +24,13 @@ class AddNewCard extends React.Component {
     }
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <View style={{flex: 1, backgroundColor: '#231F20'}}>
                 <View style={[styles.rowed, {marginTop: 10}]}>
-                    <Button transparent style={{paddingBottom: 4}}>
+                    <Button transparent style={{paddingBottom: 4}}
+                            title="Go back"
+                            onPress={() => this.props.navigation.goBack()}>
                         <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
                     </Button>
                     <Text style={[styles.movieTitle]}>Add New Card</Text>
@@ -42,7 +46,8 @@ class AddNewCard extends React.Component {
                                placeholder="**** **** **** ****"
                                placeholderTextColor="#5a5355"
                                selectionColor="#AF7D04"
-                               keyboardType="phone-pad"/>
+                               keyboardType="phone-pad"
+                               maxLength={16}/>
                     <View style={styles.rowed}>
                         <Image style={{width: 70, height: 35}}
                                source={require('../assets/img/payments/verve.png')} resizeMode="contain"/>
@@ -70,7 +75,8 @@ class AddNewCard extends React.Component {
                                        placeholder="- - -"
                                        placeholderTextColor="#5a5355"
                                        selectionColor="#AF7D04"
-                                       keyboardType="phone-pad"/>
+                                       keyboardType="phone-pad"
+                                       maxLength={3}/>
                         </View>
                     </View>
                     <View>
@@ -93,7 +99,11 @@ class AddNewCard extends React.Component {
                 </ListItem>
 
                 <Button block iconLeft
-                        style={[styles.primaryButton, {marginTop: 20, marginHorizontal: 10, borderRadius: 0}]}>
+                        style={[styles.primaryButton, {marginTop: 20, marginHorizontal: 10, borderRadius: 0}]}
+                        title="OTP"
+                        onPress={() =>
+                            navigate('Otp', { name: 'Otp' })
+                        }>
                     <Text style={styles.buttonText}>ACCEPT & CONTINUE</Text>
                     <Icon name='ios-card' style={{fontSize: 30, color: '#EEE6D9'}}/>
                 </Button>

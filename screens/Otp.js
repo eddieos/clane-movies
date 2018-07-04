@@ -9,11 +9,14 @@ import {Icon, Text, Button } from 'native-base';
 import styles from "../styles/style";
 
 class Otp extends React.Component {
+    static navigationOptions = { header: null };
     render() {
         return (
             <View style={{flex: 1, backgroundColor: '#231F20'}}>
                 <View style={[styles.rowed, {marginTop: 10}]}>
-                    <Button transparent style={{paddingBottom: 4}}>
+                    <Button transparent style={{paddingBottom: 4}}
+                            title="Go back"
+                            onPress={() => this.props.navigation.goBack()}>
                         <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
                     </Button>
                 </View>
@@ -58,7 +61,7 @@ class Otp extends React.Component {
                         <Text style={styles.buttonText}>PAY </Text>
                         <View>
                             <View style={{ flexDirection: 'row', }}>
-                                <Image style={{top: 4, width: 12, height: 10}} source={require('./assets/img/naira-light.png')}/>
+                                <Image style={{top: 4, width: 12, height: 10}} source={require('../assets/img/naira-light.png')}/>
                                 <Text style={styles.payAmount}>6,400.00</Text>
                             </View>
                         </View>

@@ -3,7 +3,7 @@ import {
     Image,
     View, ScrollView, TextInput
 } from 'react-native';
-import {Icon, Text, Button, Left, Right, ListItem, Radio} from 'native-base';
+import {Icon, Text, Button, DatePicker, ListItem, CheckBox} from 'native-base';
 
 
 import styles from "../styles/style";

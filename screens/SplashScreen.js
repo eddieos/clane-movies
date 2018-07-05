@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {
     Image,
-    ImageBackground, TouchableOpacity
+    ImageBackground, TouchableOpacity, StatusBar
 } from 'react-native';
 
 class SplashScreen extends React.Component {
@@ -12,6 +12,8 @@ class SplashScreen extends React.Component {
             <ImageBackground
                 source={require('../assets/img/bgImage.png')}
                 style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <StatusBar barStyle = "light-content" hidden = {false}/>
+
                 <TouchableOpacity
                     onPress={() =>
                     navigate('Login', { name: 'Login' })

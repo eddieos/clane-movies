@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {
     Image,
-    View, ScrollView, ImageBackground, StatusBar, WebView
+    View, ScrollView, ImageBackground, WebView
 } from 'react-native';
 import {Icon, Text, Header, Button, Left, Grid, Col} from 'native-base';
 
@@ -14,7 +14,6 @@ class Avengers extends React.Component {
         const { navigate } = this.props.navigation;
         return (
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
-                <StatusBar translucent barStyle="light-content" />
                 <ImageBackground
                     source={require('../assets/img/avengers/poster.jpg')}
                     style={{height: 210}}>
@@ -50,7 +49,7 @@ class Avengers extends React.Component {
                 </Grid>
                 <View style={{ marginHorizontal: 10}}>
                     <Text style={styles.movieTitle}>Avengers: Infinity War</Text>
-                    <View style={{height: 155}}>
+                    <View style={{height: 180}}>
                         <WebView
                             style={{flex: 1}}
                             javaScriptEnabled

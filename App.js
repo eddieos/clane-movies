@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 
 // Screens
 import SplashScreen from './screens/SplashScreen';
@@ -18,7 +18,16 @@ import AddNewCard from './screens/AddNewCard';
 import Otp from './screens/Otp';
 
 
-export default createStackNavigator({
+export default class App extends React.Component {
+    render() {
+        return (
+            <AppNavigator/>
+        );
+    }
+}
+
+
+export const AppNavigator = createStackNavigator({
     SplashScreen: {screen: SplashScreen},
     Login: {screen: Login},
     SignUp: {screen: SignUp},
@@ -27,4 +36,9 @@ export default createStackNavigator({
     BuyTicket: {screen: BuyTicket},
     AddNewCard: {screen: AddNewCard},
     Otp: {screen: Otp},
+});
+
+export const Tab = createBottomTabNavigator({
+    HomeFeed: {screen: HomeFeed},
+    Avengers: {screen: Avengers},
 });

@@ -3,13 +3,13 @@ import {
     Image,
     View, ScrollView, TextInput
 } from 'react-native';
-import {Icon, Text, Button, DatePicker, ListItem, CheckBox} from 'native-base';
+import {Icon, Text, Button, DatePicker, ListItem, CheckBox, Header, Left} from 'native-base';
 
 
 import styles from "../styles/style";
 
 class AddNewCard extends React.Component {
-    static navigationOptions = { header: null };
+    static navigationOptions = {header: null};
 
     constructor(props) {
         super(props);
@@ -17,6 +17,7 @@ class AddNewCard extends React.Component {
             checkbox1: false,
         };
     }
+
     toggleSwitch1() {
         this.setState({
             checkbox1: !this.state.checkbox1
@@ -24,19 +25,20 @@ class AddNewCard extends React.Component {
     }
 
     render() {
-        const { navigate } = this.props.navigation;
+        const {navigate} = this.props.navigation;
         return (
             <View style={{flex: 1, backgroundColor: '#231F20'}}>
-                <View style={[styles.rowed, {marginTop: 10}]}>
-                    <Button transparent style={{paddingBottom: 4}}
-                            title="Go back"
-                            onPress={() => this.props.navigation.goBack()}>
-                        <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
-                    </Button>
-                    <Text style={[styles.movieTitle]}>Add New Card</Text>
-                    <View></View>
-                    <View></View>
-                </View>
+                <Header transparent>
+                    <Left>
+                        <Button transparent style={{paddingBottom: 4}}
+                                title="Go back"
+                                onPress={() => this.props.navigation.goBack()}>
+                            <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
+                        </Button>
+                    </Left>
+                </Header>
+
+                <Text style={[styles.movieTitle, { alignSelf: 'center', marginTop: -15}]}>Add New Card</Text>
 
                 <View style={{marginVertical: 20}}>
                 </View>
@@ -102,7 +104,7 @@ class AddNewCard extends React.Component {
                         style={[styles.primaryButton, {marginTop: 20, marginHorizontal: 10, borderRadius: 0}]}
                         title="OTP"
                         onPress={() =>
-                            navigate('Otp', { name: 'Otp' })
+                            navigate('Otp', {name: 'Otp'})
                         }>
                     <Text style={styles.buttonText}>ACCEPT & CONTINUE</Text>
                     <Icon name='ios-card' style={{fontSize: 30, color: '#EEE6D9'}}/>

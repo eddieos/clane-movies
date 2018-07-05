@@ -3,7 +3,7 @@ import {
     Image,
     View, ScrollView, TextInput
 } from 'react-native';
-import {Icon, Text, Button, Left, Right, ListItem, Radio} from 'native-base';
+import {Icon, Text, Button, Left, Right, ListItem,Header, Radio} from 'native-base';
 
 
 import styles from "../styles/style";
@@ -52,17 +52,16 @@ class BuyTicket extends React.Component {
         const { navigate } = this.props.navigation;
         return (
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
-                <View style={[styles.rowed, {marginTop: 10}]}>
-                    <Button transparent style={{paddingBottom: 4}}
-                            title="Go back"
-                            onPress={() => this.props.navigation.goBack()}>
-                        <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
-                    </Button>
-                    <Text style={[styles.movieTitle]}>Avengers: Infinity War</Text>
-                    <View></View>
-                    <View></View>
-                </View>
-
+                <Header transparent>
+                    <Left>
+                        <Button transparent style={{paddingBottom: 4}}
+                                title="Go back"
+                                onPress={() => this.props.navigation.goBack()}>
+                            <Icon name="ios-arrow-dropleft-circle-outline"  style={{fontSize: 30, color: '#AF7D04'}}/>
+                        </Button>
+                    </Left>
+                </Header>
+                <Text style={[styles.movieTitle, { alignSelf: 'center', marginTop: -15}]}>Avengers: Infinity War</Text>
                 <View style={[styles.rowed, {marginTop: 10}]}>
                     <View style={styles.rowed}>
                         <View>

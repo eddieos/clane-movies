@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {
-    View, TextInput
+    View, TextInput, StatusBar
 } from 'react-native';
 import {Button, Icon, Text, Header, Left } from 'native-base';
 
@@ -13,18 +13,22 @@ class SignUp extends React.Component {
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.loginBg}>
-                <View>
-                    <Header transparent style={{marginLeft: -30}}>
-                        <Left>
-                            <Button
-                                transparent style={{paddingBottom: 4}}
-                                title="Go back"
-                                onPress={() => this.props.navigation.goBack()}>
-                                <Icon name="ios-arrow-dropleft-circle-outline"  style={{fontSize: 30, color: '#AF7D04'}}/>
-                            </Button>
-                        </Left>
+                <StatusBar
+                    barStyle="light-content"
+                />
 
-                    </Header>
+                <Header transparent style={{marginLeft: -30}}>
+                    <Left>
+                        <Button
+                            transparent style={{paddingBottom: 4}}
+                            title="Go back"
+                            onPress={() => this.props.navigation.goBack()}>
+                            <Icon name="ios-arrow-dropleft-circle-outline"  style={{fontSize: 30, color: '#AF7D04'}}/>
+                        </Button>
+                    </Left>
+
+                </Header>
+                <View>
                     <View style={styles.rowed}>
                         <Button primary style={[styles.socialButton, styles.fb]}>
                             <Icon name='logo-facebook'/>

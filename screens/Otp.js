@@ -3,7 +3,7 @@ import {
     Image,
     View, TextInput
 } from 'react-native';
-import {Icon, Text, Button } from 'native-base';
+import {Icon, Text, Button, Header, Left } from 'native-base';
 
 
 import styles from "../styles/style";
@@ -13,13 +13,15 @@ class Otp extends React.Component {
     render() {
         return (
             <View style={{flex: 1, backgroundColor: '#231F20'}}>
-                <View style={[styles.rowed, {marginTop: 10}]}>
-                    <Button transparent style={{paddingBottom: 4}}
-                            title="Go back"
-                            onPress={() => this.props.navigation.goBack()}>
-                        <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
-                    </Button>
-                </View>
+                <Header transparent>
+                    <Left>
+                        <Button transparent style={{paddingBottom: 4}}
+                                title="Go back"
+                                onPress={() => this.props.navigation.goBack()}>
+                            <Icon name="ios-arrow-dropleft-circle-outline" style={{fontSize: 30, color: '#AF7D04'}}/>
+                        </Button>
+                    </Left>
+                </Header>
 
                 <View style={{marginVertical: 20}}>
                 </View>

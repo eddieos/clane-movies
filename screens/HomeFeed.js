@@ -21,7 +21,7 @@ class HomeFeed extends React.Component {
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
                 <ImageBackground
                     source={require('../assets/img/sliderBG.png')}
-                    style={{height: 200}}>
+                    style={{height: 220, flexDirection: 'column', justifyContent: 'space-between'}}>
                     <Header transparent searchBar rounded>
                         <View style={{width: 100}}></View>
                         <Item>

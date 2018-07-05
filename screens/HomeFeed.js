@@ -43,9 +43,13 @@ class HomeFeed extends React.Component {
                                    source={require('../assets/img/avengers/thumb.jpg')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.shadowed}>
+                        <TouchableOpacity style={styles.shadowed}
+                                          title="Incredibles 2"
+                                          onPress={() =>
+                                              navigate('Incredibles', {name: 'Incredibles'})
+                                          }>
                             <Image style={styles.imageGrid}
-                                   source={require('../assets/img/incredibles/poster.jpg')}
+                                   source={require('../assets/img/incredibles/poster.png')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.shadowed}
@@ -57,7 +61,11 @@ class HomeFeed extends React.Component {
                                    source={require('../assets/img/annihilation/poster.jpg')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.shadowed}>
+                        <TouchableOpacity style={styles.shadowed}
+                                          title="Black Panther"
+                                          onPress={() =>
+                                              navigate('BlackPanther', {name: 'BlackPanther'})
+                                          }>
                             <Image style={styles.imageGrid}
                                    source={require('../assets/img/blackpanther/poster.jpg')}
                                    resizeMode="cover"/>

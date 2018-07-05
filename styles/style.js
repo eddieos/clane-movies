@@ -126,7 +126,7 @@ export default StyleSheet.create({
     listGenre: {
         color: '#BF9000',
         fontFamily: 'CircularStd-Book',
-        fontSize: 8,
+        fontSize: 9,
     },
     listRating: {
         position: 'absolute',
@@ -193,6 +193,11 @@ export default StyleSheet.create({
         margin: 10,
         borderRadius: 5,
         padding: 10,
+        shadowColor: '#EEE6D9',
+        shadowOffset: { height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 1,
+        paddingBottom: 5
     },
     count: {
         color: '#77101C',

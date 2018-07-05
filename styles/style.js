@@ -155,13 +155,13 @@ export default StyleSheet.create({
     movieRating: {
         color: '#FFFFFF',
         fontFamily: 'CircularStd-Medium',
-        fontSize: 12,
+        fontSize: 14,
         marginHorizontal: 4
     },
     movieTime: {
         color: '#AF7D04',
         fontFamily: 'CircularStd-Book',
-        fontSize: 12,
+        fontSize: 14,
         marginHorizontal: 4
     },
     inputSeatAmount: {

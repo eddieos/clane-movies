@@ -10,7 +10,9 @@ export default class SampleMovieList extends Component {
   render() {
     return (
       <View>
-          <View style={styles.movieList}>
+          <TouchableOpacity style={styles.movieList}
+                            title="Avengers"
+                            onPress={() => this.props.navigation.navigate('Avengers')}>
               <Image style={styles.imageThumb}
                      source={require('../assets/img/annihilation/thumb.jpeg')}
                      resizeMode="cover"/>
@@ -39,7 +41,7 @@ export default class SampleMovieList extends Component {
                       <Text style={styles.listTime}>115m</Text>
                   </View>
               </View>
-          </View>
+          </TouchableOpacity>
           <View style={styles.movieList}>
               <Image style={styles.imageThumb}
                      source={require('../assets/img/incredibles/thumb.jpeg')}

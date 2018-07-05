@@ -12,6 +12,7 @@ import SplashScreen from './screens/SplashScreen';
 import Login from './screens/Login';
 import SignUp from './screens/SignUp';
 import HomeFeed from './screens/HomeFeed';
+import SampleMovieList from './screens/SampleMovieList';
 import Avengers from './screens/Avengers';
 import BuyTicket from './screens/BuyTicket';
 import AddNewCard from './screens/AddNewCard';
@@ -33,6 +34,7 @@ export const AppNavigator = createStackNavigator({
     Login: {screen: Login},
     SignUp: {screen: SignUp},
     HomeFeed: {screen: HomeFeed},
+    SampleMovieList: {screen: SampleMovieList},
     Avengers: {screen: Avengers},
     BuyTicket: {screen: BuyTicket},
     AddNewCard: {screen: AddNewCard},

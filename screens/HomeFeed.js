@@ -69,7 +69,7 @@ class HomeFeed extends React.Component {
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
                          style={{backgroundColor: '#231F20'}}>
-                        <SampleMovieList/>
+                        <SampleMovieList navigation={this.props.navigation}/>
                     </Tab>
                     <Tab heading="Adventure"
                          textStyle={styles.tabCustomText}
@@ -77,7 +77,7 @@ class HomeFeed extends React.Component {
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
                          style={{backgroundColor: '#231F20'}}>
-                        <SampleMovieList/>
+                        <SampleMovieList navigation={this.props.navigation}/>
                     </Tab>
                     <Tab heading="Drama"
                          textStyle={styles.tabCustomText}
@@ -85,7 +85,7 @@ class HomeFeed extends React.Component {
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
                          style={{backgroundColor: '#231F20'}}>
-                        <SampleMovieList/>
+                        <SampleMovieList navigation={this.props.navigation}/>
                     </Tab>
                     <Tab heading="Thriller"
                          textStyle={styles.tabCustomText}
@@ -93,7 +93,7 @@ class HomeFeed extends React.Component {
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
                          style={{backgroundColor: '#231F20'}}>
-                        <SampleMovieList/>
+                        <SampleMovieList navigation={this.props.navigation}/>
                     </Tab>
                     <Tab heading="Horror"
                          textStyle={styles.tabCustomText}
@@ -101,7 +101,7 @@ class HomeFeed extends React.Component {
                          tabStyle={styles.customTabStyle}
                          activeTabStyle={styles.customTabStyle}
                          style={{backgroundColor: '#231F20'}}>
-                        <SampleMovieList/>
+                        <SampleMovieList navigation={this.props.navigation}/>
                     </Tab>
                 </Tabs>
 

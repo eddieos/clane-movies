@@ -58,19 +58,19 @@ class Avengers extends React.Component {
                             }}
                         />
                     </View>
-                    <Text style={[styles.listDesc, {marginVertical: 5}]}>The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</Text>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-                        <Text style={[styles.listGenre, {fontSize: 9}]}>Adventure | Drama | Horror | Mystery | Sci-Fi | Thriller</Text>
+                    <Text style={[styles.listDesc, {marginVertical: 10, fontSize: 14}]}>The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</Text>
 
+                        <Text style={[styles.listGenre, {fontSize: 12, marginBottom: 10}]}>Adventure | Drama | Horror | Mystery | Sci-Fi | Thriller</Text>
+
+
+                    <View style={styles.rowed}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', marginRight: 5}}>
+                            <Icon name="ios-heart" style={{color: '#DB3236', fontSize: 30,}}/>
+                            <Text style={styles.movieRating}>70%</Text>
+                        </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-                            <View style={{ flexDirection: 'row', alignItems: 'center', marginRight: 5}}>
-                                <Icon name="ios-heart" style={{color: '#DB3236', fontSize: 24,}}/>
-                                <Text style={styles.movieRating}>70%</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-                                <Icon name="ios-clock" style={{color: '#AF7D04', fontSize: 24}}/>
-                                <Text style={styles.movieTime}>115m</Text>
-                            </View>
+                            <Icon name="ios-clock" style={{color: '#AF7D04', fontSize: 24}}/>
+                            <Text style={styles.movieTime}>115m</Text>
                         </View>
                     </View>
 

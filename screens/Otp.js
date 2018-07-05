@@ -11,6 +11,7 @@ import styles from "../styles/style";
 class Otp extends React.Component {
     static navigationOptions = { header: null };
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <View style={{flex: 1, backgroundColor: '#231F20'}}>
                 <Header transparent>
@@ -49,16 +50,16 @@ class Otp extends React.Component {
                                    selectionColor="#AF7D04"
                                    keyboardType="phone-pad"
                                    maxLength={1}/>
-
                     </View>
-
-
-
                 </View>
 
 
                 <Button block iconLeft
-                        style={[styles.secondaryButton, {marginTop: 50, marginHorizontal: 10}]}>
+                        style={[styles.secondaryButton, {marginTop: 50, marginHorizontal: 10}]}
+                        title="Make Payment"
+                        onPress={() =>
+                            navigate('Success', { name: 'Success' })
+                        }>
                     <View style={styles.rowed}>
                         <Text style={styles.buttonText}>PAY </Text>
                         <View>

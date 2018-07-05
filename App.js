@@ -16,6 +16,7 @@ import Avengers from './screens/Avengers';
 import BuyTicket from './screens/BuyTicket';
 import AddNewCard from './screens/AddNewCard';
 import Otp from './screens/Otp';
+import Success from './screens/Success';
 
 
 export default class App extends React.Component {
@@ -36,6 +37,7 @@ export const AppNavigator = createStackNavigator({
     BuyTicket: {screen: BuyTicket},
     AddNewCard: {screen: AddNewCard},
     Otp: {screen: Otp},
+    Success: {screen: Success},
 });
 
 export const Tab = createBottomTabNavigator({

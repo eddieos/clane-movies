@@ -21,7 +21,7 @@ class HomeFeed extends React.Component {
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
                 <ImageBackground
                     source={require('../assets/img/sliderBG.png')}
-                    style={{height: 220, flexDirection: 'column', justifyContent: 'space-between'}}>
+                    style={{ flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 5}}>
                     <Header transparent searchBar rounded>
                         <View style={{width: 100}}></View>
                         <Item>
@@ -48,7 +48,11 @@ class HomeFeed extends React.Component {
                                    source={require('../assets/img/incredibles/poster.jpg')}
                                    resizeMode="cover"/>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.shadowed}>
+                        <TouchableOpacity style={styles.shadowed}
+                                          title="Annihilation"
+                                          onPress={() =>
+                                              navigate('Annihilation', {name: 'Annihilation'})
+                                          }>
                             <Image style={styles.imageGrid}
                                    source={require('../assets/img/annihilation/poster.jpg')}
                                    resizeMode="cover"/>

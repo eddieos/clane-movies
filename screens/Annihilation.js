@@ -8,14 +8,14 @@ import {Icon, Text, Header, Button, Left, Grid, Col} from 'native-base';
 
 import styles from "../styles/style";
 
-class Avengers extends React.Component {
+class Annihilation extends React.Component {
     static navigationOptions = { header: null };
     render() {
         const { navigate } = this.props.navigation;
         return (
             <ScrollView style={{flex: 1, backgroundColor: '#231F20'}}>
                 <ImageBackground
-                    source={require('../assets/img/avengers/poster.jpg')}
+                    source={require('../assets/img/annihilation/poster.jpg')}
                     style={{height: 210}}>
                     <Header transparent>
                         <Left>
@@ -48,29 +48,32 @@ class Avengers extends React.Component {
                     </Col>
                 </Grid>
                 <View style={{ marginHorizontal: 10}}>
-                    <Text style={styles.movieTitle}>Avengers: Infinity War</Text>
+                    <Text style={styles.movieTitle}>Annihilation</Text>
                     <View style={{height: 180}}>
                         <WebView
                             style={{flex: 1}}
                             javaScriptEnabled
                             source={{
-                                uri: 'https://www.youtube.com/embed/6ZfuNTqbHE8?rel=0&autoplay=0&showinfo=0&controls=1'
+                                uri: 'https://www.youtube.com/embed/89OP78l9oF0?rel=0&autoplay=0&showinfo=0&controls=1'
                             }}
                         />
                     </View>
-                    <Text style={[styles.listDesc, {marginVertical: 10, fontSize: 14}]}>The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</Text>
+                    <Text style={[styles.listDesc, {marginVertical: 10, fontSize: 14}]}>A biologist signs up for a dangerous, secret expedition
+                        into a
+                        mysterious zone where the laws of nature don't apply.</Text>
 
-                        <Text style={[styles.listGenre, {fontSize: 12, marginBottom: 10}]}>Adventure | Drama | Horror | Mystery | Sci-Fi | Thriller</Text>
+                        <Text style={[styles.listGenre, {fontSize: 12, marginBottom: 10}]}>Adventure | Drama | Horror | Mystery | Sci-Fi |
+                            Thriller</Text>
 
 
                     <View style={styles.rowed}>
                         <View style={{ flexDirection: 'row', alignItems: 'center', marginRight: 5}}>
                             <Icon name="ios-heart" style={{color: '#DB3236', fontSize: 30,}}/>
-                            <Text style={styles.movieRating}>95%</Text>
+                            <Text style={styles.movieRating}>70%</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                             <Icon name="ios-clock" style={{color: '#AF7D04', fontSize: 24}}/>
-                            <Text style={styles.movieTime}>160m</Text>
+                            <Text style={styles.movieTime}>115m</Text>
                         </View>
                     </View>
 
@@ -81,4 +84,4 @@ class Avengers extends React.Component {
     }
 }
 
-export default Avengers;
+export default Annihilation;

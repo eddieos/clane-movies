@@ -11,8 +11,8 @@ export default class SampleMovieList extends Component {
     return (
       <View>
           <TouchableOpacity style={styles.movieList}
-                            title="Avengers"
-                            onPress={() => this.props.navigation.navigate('Avengers')}>
+                            title="Annihilation"
+                            onPress={() => this.props.navigation.navigate('Annihilation')}>
               <Image style={styles.imageThumb}
                      source={require('../assets/img/annihilation/thumb.jpeg')}
                      resizeMode="cover"/>

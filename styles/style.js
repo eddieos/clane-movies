@@ -102,6 +102,7 @@ export default StyleSheet.create({
         shadowOffset: { height: 2 },
         shadowOpacity: 0.8,
         shadowRadius: 2,
+        paddingBottom: 5
     },
     movieList: {
         flexDirection: 'row',

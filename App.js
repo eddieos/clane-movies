@@ -14,6 +14,7 @@ import SignUp from './screens/SignUp';
 import HomeFeed from './screens/HomeFeed';
 import SampleMovieList from './screens/SampleMovieList';
 import Avengers from './screens/Avengers';
+import Annihilation from './screens/Annihilation';
 import BuyTicket from './screens/BuyTicket';
 import AddNewCard from './screens/AddNewCard';
 import Otp from './screens/Otp';
@@ -36,6 +37,7 @@ export const AppNavigator = createStackNavigator({
     HomeFeed: {screen: HomeFeed},
     SampleMovieList: {screen: SampleMovieList},
     Avengers: {screen: Avengers},
+    Annihilation: {screen: Annihilation},
     BuyTicket: {screen: BuyTicket},
     AddNewCard: {screen: AddNewCard},
     Otp: {screen: Otp},

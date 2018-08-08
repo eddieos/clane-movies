@@ -53,6 +53,14 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>CircularStd-Black.otf</string>
+		<string>CircularStd-BlackItalic.otf</string>
+		<string>CircularStd-Bold.otf</string>
+		<string>CircularStd-BoldItalic.otf</string>
+		<string>CircularStd-Book.otf</string>
+		<string>CircularStd-BookItalic.otf</string>
+		<string>CircularStd-Medium.otf</string>
+		<string>CircularStd-MediumItalic.otf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>
 		<string>FontAwesome.ttf</string>
@@ -67,15 +75,6 @@
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
 		<string>Feather.ttf</string>
-		<string>CircularStd-Black.otf</string>
-		<string>CircularStd-BlackItalic.otf</string>
-		<string>CircularStd-Bold.otf</string>
-		<string>CircularStd-BoldItalic.otf</string>
-		<string>CircularStd-Book.otf</string>
-		<string>CircularStd-BookItalic.otf</string>
-		<string>CircularStd-Medium.otf</string>
-		<string>CircularStd-MediumItalic.otf</string>
-		<string>Circular Regular.ttf</string>
 	</array>
 </dict>
 </plist>
